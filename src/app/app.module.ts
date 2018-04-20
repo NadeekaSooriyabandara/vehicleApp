@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     VehicleComponent,
-    VehicleListComponent
+    VehicleListComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
