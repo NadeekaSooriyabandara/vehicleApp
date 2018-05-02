@@ -1,7 +1,7 @@
 <div class="container">
     <mat-card class="card-content">
         <form #vehicleForm="ngForm">
-            <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="vehicleService.selectedVehicle.$key">
+            <!-- <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="vehicleService.selectedVehicle.$key"> -->
             <div class="form-group">
                 <label>Vehicle Number:</label>
                 <input class="form-control" name="vehicleNo" [(ngModel)]="vehicleNo" placeholder="Vehicle Number" required>
