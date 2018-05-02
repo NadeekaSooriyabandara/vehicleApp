@@ -14,7 +14,7 @@ getData() {
 }
 
 insertVehicle(vehicle: Vehicle) {
-  this.vehicleList.push({
+  this.firebase.object('Vehicles/' + vehicle.vehicleNo).set({
     ac: vehicle.ac,
     bus: vehicle.bus,
     busacorvan: vehicle.busacorvan,
@@ -22,7 +22,8 @@ insertVehicle(vehicle: Vehicle) {
     image: vehicle.image,
     seats: vehicle.seats,
     vehicleNo: vehicle.vehicleNo,
-    vehicletype: vehicle.vehicletype
+    vehicletype: vehicle.vehicletype,
+    vehicle: vehicle.vehicle
   });
 }
 
@@ -36,7 +37,8 @@ updateVehicle(vehicle: Vehicle) {
     image: vehicle.image,
     seats: vehicle.seats,
     vehicleNo: vehicle.vehicleNo,
-    vehicletype: vehicle.vehicletype
+    vehicletype: vehicle.vehicletype,
+    vehicle: vehicle.vehicle
     });
 }
 

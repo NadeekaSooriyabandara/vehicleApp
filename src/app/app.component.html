@@ -1,13 +1,28 @@
 <mat-toolbar color="accent">
     <mat-toolbar-row>
+        <button mat-button disabled>
+                        <img class="png-icon" src="../../../assets/bus-icon.png" style="max-width: 36px; min-width: 36px;">
+                    </button>
         <span>Vehicle Register</span>
 
         <span class="example-spacer"></span>
 
         <button mat-button routerLink="/register" routerLinkActive="active">Register Vehicle</button>
         <button mat-button routerLink="/vehicles" routerLinkActive="active">Registered Vehicles</button>
+        <!-- <button mat-button routerLink="/">Home</button> -->
         <button mat-button routerLink="/about" routerLinkActive="active">About</button>
     </mat-toolbar-row>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<div class="page-container">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- <div class="row">
+    <div class="col-md-3">
+        <app-vehicle></app-vehicle>
+    </div>
+    <div class="col-md-5">
+        <app-vehicle-list></app-vehicle-list>
+    </div>
+</div> -->

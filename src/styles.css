@@ -8,3 +8,16 @@
 .example-spacer {
     flex: 1 1 auto;
 }
+
+input.ng-invalid.ng-dirty {
+    border: 1px solid red;
+}
+
+button:hover,
+a.btn:hover {
+    cursor: pointer;
+}
+
+html {
+    background-color: darkgray;
+}

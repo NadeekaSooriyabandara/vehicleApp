@@ -1,3 +1,19 @@
-<p>
-  vehicle-list works!
-</p>
+<table class="table table-sm table-hover">
+    <tr>
+        <th style="vertical-align: middle">Vehicle No.</th>
+        <th style="vertical-align: middle">Vehicle Type</th>
+        <th style="vertical-align: middle">Seats</th>
+        <th style="vertical-align: middle">AC Fascility</th>
+    </tr>
+    <tr *ngFor="let vehicle of vehicleList">
+        <td style="vertical-align: middle">{{vehicle.vehicleNo}}</td>
+        <td style="vertical-align: middle">{{vehicle.vehicle}}</td>
+        <td style="vertical-align: middle">{{vehicle.seats}}</td>
+        <td style="vertical-align: middle">{{vehicle.ac}}</td>
+        <td>
+            <a class="btn" (click)="onDelete(vehicle.$key)">
+                <i class="fa fa-trash-o"></i>
+            </a>
+        </td>
+    </tr>
+</table>

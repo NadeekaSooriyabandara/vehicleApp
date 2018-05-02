@@ -1,3 +1,45 @@
-<p>
-  vehicle works!
-</p>
+<div class="container">
+    <mat-card class="card-content">
+        <form #vehicleForm="ngForm">
+            <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="vehicleService.selectedVehicle.$key">
+            <div class="form-group">
+                <label>Vehicle Number:</label>
+                <input class="form-control" name="vehicleNo" [(ngModel)]="vehicleNo" placeholder="Vehicle Number" required>
+            </div>
+            <div class="form-group">
+                <label>No. of Seats:</label>
+                <input class="form-control" name="seats" [(ngModel)]="seats" placeholder="No. of Seats" required>
+            </div>
+            <div class="form-group">
+                <label>Vehicle Type:</label>
+                <mat-form-field>
+                    <mat-select [(value)]="vehicletype">
+                        <mat-option value="bus">Bus</mat-option>
+                        <mat-option value="van">Van</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <label>AC Fascility:</label>
+                <mat-form-field>
+                    <mat-select [(value)]="ac">
+                        <mat-option value="AC">AC</mat-option>
+                        <mat-option value="NONAC">NONAC</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <label>Image:</label>
+                <input #myInput type="file" (change)="photoSelected($event)" accept=".png, .jpg" required>
+            </div>
+            <div class="form-group">
+                <button mat-raised-button class="btn btn-default" type="button" (click)="onSubmit(vehicleForm)" [disabled]="vehicleForm.invalid || isImageNull()" required>
+                      <i class="fa fa-floppy-o"></i>
+                      Submit</button>
+                <button mat-raised-button class="btn btn-default" type="button" (click)="resetForm(vehicleForm)">
+                      <i class="fa fa-repeat"></i>
+                      Reset</button>
+            </div>
+        </form>
+    </mat-card>
+</div>

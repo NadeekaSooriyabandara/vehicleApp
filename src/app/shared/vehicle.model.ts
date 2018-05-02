@@ -8,4 +8,6 @@ export class Vehicle {
     busacorvan: string;
     busnonacorvan: string;
     ac: string;
+    vehicle: string;
+
 }
